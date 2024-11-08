@@ -31,7 +31,7 @@ conversation = [
     {
         "role": "user",
         "content": [
-            {"type": "text", "text": "What is the likelihood that drying is being performed on the baby? Provide a confidence score (e.g., high, medium, low) to indicate your certainty. Briefly."},
+            {"type": "text", "text": "Considering the 8 key actions (PPV, CPR, ETT, Drying, Pulse Oximeter, Reposition, Suction, and UVC) outlined in the Neonatal Resuscitation Program, which action is being performed in this video clip, and with what level of confidence? Briefly and only one action."},
             {"type": "video"},
         ],
     },
@@ -40,7 +40,7 @@ conversation = [
 prompt = processor.apply_chat_template(conversation, add_generation_prompt=True)
 
 # Load and process the video
-video_path = "Drying.mp4"
+video_path = "ETT.mp4"
 container = av.open(video_path)
 
 total_frames = container.streams.video[0].frames
@@ -54,6 +54,3 @@ output = model.generate(**inputs_video, max_new_tokens=50, do_sample=False)
 # Decode and print the result
 result = processor.decode(output[0][2:], skip_special_tokens=True)
 print(result)
-# Save the result to a text file
-with open("output.txt", "w") as f:
-    f.write(result)
