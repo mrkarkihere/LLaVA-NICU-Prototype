@@ -78,11 +78,47 @@ In the video, a clinician is seen performing CPR on a neonate, which is a newbor
 
 # TRIAL 11 ()
 **PROMPT:** 
+Identify the primary action in this clip, considering only the key neonatal resuscitation procedures. Does this action align with one of the core actions (e.g., Pulse Oximeter) intended to stabilize the neonate?
+
+**RESPONSE:**
+The primary action in this clip is the administration of oxygen to the neonate. This is a key neonatal resuscitation procedure, as oxygen is a critical component of neonatal care and can help stabilize the neonate by improving oxygenation and reducing the risk of hypoxemia. The nurses are using a nasal cannula to deliver oxygen to the baby, which is a common method for providing supplemental oxygen to...
+
+# TRIAL 12 ()
+**PROMPT (CPR2 video):** 
+What action step does this segment represent within the neonatal resuscitation procedure? List only if it corresponds to the defined steps, like 'chest compressions' or 'suctioning.
+
+**RESPONSE:**
+The image shows a medical team performing a neonatal resuscitation procedure. The action step represented in this segment is "CPR" (Cardiopulmonary Resuscitation).
+
+# TRIAL 13 ()
+**PROMPT (ETT2 video):** 
+Considering the 8 key actions (PPV, CPR, ETT, Drying, Pulse Oximeter, Reposition, Suction, and UVC) outlined in the Neonatal Resuscitation Program, which action is being performed in this video clip, and with what level of confidence? Briefly and only one action.
+
+**RESPONSE:**
+The action being performed in this video clip is ETT (Endotracheal Tube), with a high level of confidence.
+
+# TRIAL 14 ()
+**PROMPT ():** 
 
 **RESPONSE:**
 
-# TRIAL 12 ()
-**PROMPT:** 
+# TRIAL 15 ()
+**PROMPT ():** 
+
+**RESPONSE:**
+
+# TRIAL 16 ()
+**PROMPT ():** 
+
+**RESPONSE:**
+
+# TRIAL 17 ()
+**PROMPT ():** 
+
+**RESPONSE:**
+
+# TRIAL 18 ()
+**PROMPT ():** 
 
 **RESPONSE:**
 
