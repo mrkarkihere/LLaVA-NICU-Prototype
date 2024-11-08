@@ -31,7 +31,7 @@ conversation = [
     {
         "role": "user",
         "content": [
-            {"type": "text", "text": "What is going on in the video? What do you  see? Can you identify the action? If not, take a guess."},
+            {"type": "text", "text": "What is the likelihood that drying is being performed on the baby? Provide a confidence score (e.g., high, medium, low) to indicate your certainty. Briefly."},
             {"type": "video"},
         ],
     },
@@ -40,7 +40,7 @@ conversation = [
 prompt = processor.apply_chat_template(conversation, add_generation_prompt=True)
 
 # Load and process the video
-video_path = "PPV4.mp4"
+video_path = "Drying.mp4"
 container = av.open(video_path)
 
 total_frames = container.streams.video[0].frames
@@ -49,8 +49,11 @@ clip = read_video_pyav(container, indices)
 
 # Process the video and generate output
 inputs_video = processor(text=prompt, videos=clip, padding=True, return_tensors="pt").to(model.device)
-output = model.generate(**inputs_video, max_new_tokens=100, do_sample=False)
+output = model.generate(**inputs_video, max_new_tokens=50, do_sample=False)
 
 # Decode and print the result
 result = processor.decode(output[0][2:], skip_special_tokens=True)
 print(result)
+# Save the result to a text file
+with open("output.txt", "w") as f:
+    f.write(result)
