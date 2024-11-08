@@ -46,13 +46,12 @@ Considering the 8 key actions (PPV, CPR, ETT, Drying, Pulse Oximeter, Reposition
 The action being performed in this video clip is CPR, with a high level of confidence.
 (SIDE NOTE: in this video, there's a teal object (air bag?) being compressed and decompressed so its confusing it as CPR. i ran it multiple times and it says CPR each time)
 
-# TRIAL 7 (UNSATISFACTORY)
+# TRIAL 7 (INCORRECT)
 **PROMPT (ETT video):** 
 Considering the 8 key actions (PPV, CPR, ETT, Drying, Pulse Oximeter, Reposition, Suction, and UVC) outlined in the Neonatal Resuscitation Program, which action is being performed in this video clip, and with what level of confidence? Briefly and only one action.
 
 **RESPONSE:**
-The action being performed in this video clip is PPV (Positive Pressure Ventilation). The level of confidence in this action is very high.
-(SIDE NOTE: this one is just a really hard action to recognize because of its similarity to PPV, but it still got it wrong)
+The action being performed in this video clip is CPR, with a high level of confidence.
 
 # TRIAL 8 (CORRECT)
 **PROMPT (PPV video):**
@@ -77,7 +76,7 @@ Observe the actions in this video. Is the clinician performing CPR on the neonat
 In the video, a clinician is seen performing CPR on a neonate, which is a newborn baby. The clinician is using a bag-valve mask, which is a type of manual resuscitator, to provide..
 
 # TRIAL 11 ()
-**PROMPT:** 
+**PROMPT (PulseOximeter video):** 
 Identify the primary action in this clip, considering only the key neonatal resuscitation procedures. Does this action align with one of the core actions (e.g., Pulse Oximeter) intended to stabilize the neonate?
 
 **RESPONSE:**
@@ -98,9 +97,11 @@ Considering the 8 key actions (PPV, CPR, ETT, Drying, Pulse Oximeter, Reposition
 The action being performed in this video clip is ETT (Endotracheal Tube), with a high level of confidence.
 
 # TRIAL 14 ()
-**PROMPT ():** 
+**PROMPT (PulseOximeter2 video):** 
+Considering the 8 key actions (PPV, CPR, ETT, Drying, Pulse Oximeter, Reposition, Suction, and UVC) outlined in the Neonatal Resuscitation Program, which action is being performed in this video clip, and with what level of confidence? Briefly and only one action.
 
 **RESPONSE:**
+In the video, the action being performed is PPV (Positive Pressure Ventilation), which is a key action in the Neonatal Resuscitation Program. The level of confidence in this action is very high, as it is a standard procedure in neonatal resuscitation to provide breathing support to a baby in distress.
 
 # TRIAL 15 ()
 **PROMPT ():** 
