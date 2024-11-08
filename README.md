@@ -122,11 +122,14 @@ The action being performed in this video clip is PPV (Positive Pressure Ventilat
 Considering the 8 key actions (PPV, CPR, ETT, Drying, Pulse Oximeter, Reposition, Suction, and UVC) outlined in the Neonatal Resuscitation Program, which action is being performed in this video clip, and with what level of confidence? Briefly and only one action.
 
 **RESPONSE:**
+In the video, the action being performed is CPR (Cardiopulmonary Resuscitation). The level of confidence in this action is very high, as it is a critical component of neonatal resuscitation and is being performed by a healthcare professional who is trained to do so.
 
-# TRIAL 18 ()
-**PROMPT ():** 
+# TRIAL 18 (SATISFACTORY)
+**PROMPT (ETT2 video):** 
+What action step does this segment represent within the neonatal resuscitation procedure? List only if it corresponds to the defined steps, like 'chest compressions' or 'ETT'.
 
 **RESPONSE:**
+This segment represents the step of intubation in the neonatal resuscitation procedure.
 
 # TRIAL 19 ()
 **PROMPT ():** 
