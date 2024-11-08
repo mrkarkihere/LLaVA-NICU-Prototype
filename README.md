@@ -38,41 +38,43 @@ Considering the eight key actions (PPV, CPR, ETT, Drying, Pulse Oximeter, Reposi
 **RESPONSE:**
 In the video clip, the action being performed is CPR (Chest Compression Resuscitation). The level of confidence in this action is very high.
 
-# TRIAL 6 (SATISFACTORY)
+# TRIAL 6 (UNSATISFACTORY)
+**PROMPT (PPV2 video):** 
+Considering the 8 key actions (PPV, CPR, ETT, Drying, Pulse Oximeter, Reposition, Suction, and UVC) outlined in the Neonatal Resuscitation Program, which action is being performed in this video clip, and with what level of confidence? Briefly and only one action.
+
+**RESPONSE:**
+The action being performed in this video clip is CPR, with a high level of confidence.
+(SIDE NOTE: in this video, there's a teal object (air bag?) being compressed and decompressed so its confusing it as CPR. i ran it multiple times and it says CPR each time)
+
+# TRIAL 7 (UNSATISFACTORY)
+**PROMPT (ETT video):** 
+Considering the 8 key actions (PPV, CPR, ETT, Drying, Pulse Oximeter, Reposition, Suction, and UVC) outlined in the Neonatal Resuscitation Program, which action is being performed in this video clip, and with what level of confidence? Briefly and only one action.
+
+**RESPONSE:**
+The action being performed in this video clip is PPV (Positive Pressure Ventilation). The level of confidence in this action is very high.
+(SIDE NOTE: this one is just a really hard action to recognize because of its similarity to PPV, but it still got it wrong)
+
+# TRIAL 8 (CORRECT)
 **PROMPT (PPV video):**
 What is the likelihood that drying is being performed on the baby? Provide a confidence score (e.g., high, medium, low) to indicate your certainty. Briefly.
 
 **RESPONSE:**
 The likelihood that drying is being performed on the baby is medium. The image shows a group of people, likely healthcare professionals, attending to a baby in a hospital setting. The baby is being dried, which is a common...
+(SIDE NOTE: idk why its saying medium confidence but ig at least it got it right and the reasoning was good tooo)
 
-# TRIAL 7 (CORRECT)
+# TRIAL 9 (CORRECT)
 **PROMPT (CPR video):** 
 Considering the 8 key actions (PPV, CPR, ETT, Drying, Pulse Oximeter, Reposition, Suction, and UVC) outlined in the Neonatal Resuscitation Program, which action is being performed in this video clip, and with what level of confidence? Briefly and only one action.
 
 **RESPONSE:**
 The action being performed in this video clip is CPR, with a high level of confidence.
 
-# TRIAL 8 (CORRECT)
+# TRIAL 10 (CORRECT)
 **PROMPT:** 
 Observe the actions in this video. Is the clinician performing CPR on the neonate? Describe the method being used and the purpose of this action. Briefly.
 
 **RESPONSE:**
 In the video, a clinician is seen performing CPR on a neonate, which is a newborn baby. The clinician is using a bag-valve mask, which is a type of manual resuscitator, to provide..
-
-# TRIAL 9 (UNSATISFACTORY)
-**PROMPT (PPV2 video):** 
-Considering the 8 key actions (PPV, CPR, ETT, Drying, Pulse Oximeter, Reposition, Suction, and UVC) outlined in the Neonatal Resuscitation Program, which action is being performed in this video clip, and with what level of confidence? Briefly and only one action.
-
-**RESPONSE:**
-The action being performed in this video clip is CPR, with a high level of confidence.
-(SIDE NOTE: in this video, there's a blue object being compressed and decompressed so its confusing it as CPR. i ran it multiple times and it says CPR each time)
-
-# TRIAL 10 (UNSATISFACTORY)
-**PROMPT (ETT video):** 
-Considering the 8 key actions (PPV, CPR, ETT, Drying, Pulse Oximeter, Reposition, Suction, and UVC) outlined in the Neonatal Resuscitation Program, which action is being performed in this video clip, and with what level of confidence? Briefly and only one action.
-
-**RESPONSE (tbf; this one is hard):**
-The action being performed in this video clip is PPV (Positive Pressure Ventilation). The level of confidence in this action is very high.
 
 # TRIAL 11 ()
 **PROMPT:** 
