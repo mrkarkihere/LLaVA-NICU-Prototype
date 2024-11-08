@@ -104,21 +104,56 @@ Considering the 8 key actions (PPV, CPR, ETT, Drying, Pulse Oximeter, Reposition
 In the video, the action being performed is PPV (Positive Pressure Ventilation), which is a key action in the Neonatal Resuscitation Program. The level of confidence in this action is very high, as it is a standard procedure in neonatal resuscitation to provide breathing support to a baby in distress.
 
 # TRIAL 15 ()
-**PROMPT ():** 
+**PROMPT (Reposition):** 
+Considering the 8 key actions (PPV, CPR, ETT, Drying, Pulse Oximeter, Reposition, Suction, and UVC) outlined in the Neonatal Resuscitation Program, which action is being performed in this video clip, and with what level of confidence? Briefly and only one action.
 
 **RESPONSE:**
+In the video, the action being performed is "ETT" (Endotracheal Tube), which is a key action in the Neonatal Resuscitation Program. The level of confidence in this action being performed is very high, as it is a critical step in the resuscitation process for newborns.
 
 # TRIAL 16 ()
-**PROMPT ():** 
+**PROMPT (Suction video):** 
+Considering the 8 key actions (PPV, CPR, ETT, Drying, Pulse Oximeter, Reposition, Suction, and UVC) outlined in the Neonatal Resuscitation Program, which action is being performed in this video clip, and with what level of confidence? Briefly and only one action.
 
 **RESPONSE:**
+The action being performed in this video clip is PPV (Positive Pressure Ventilation), which is a key action in the Neonatal Resuscitation Program. The level of confidence in this action is very high, as it is a critical step in resuscitating a newborn baby.
 
 # TRIAL 17 ()
-**PROMPT ():** 
+**PROMPT (UVC video):** 
+Considering the 8 key actions (PPV, CPR, ETT, Drying, Pulse Oximeter, Reposition, Suction, and UVC) outlined in the Neonatal Resuscitation Program, which action is being performed in this video clip, and with what level of confidence? Briefly and only one action.
 
 **RESPONSE:**
 
 # TRIAL 18 ()
+**PROMPT ():** 
+
+**RESPONSE:**
+
+# TRIAL 19 ()
+**PROMPT ():** 
+
+**RESPONSE:**
+
+# TRIAL 20 ()
+**PROMPT ():** 
+
+**RESPONSE:**
+
+# TRIAL 21 ()
+**PROMPT ():** 
+
+**RESPONSE:**
+
+# TRIAL 22 ()
+**PROMPT ():** 
+
+**RESPONSE:**
+
+# TRIAL 23 ()
+**PROMPT ():** 
+
+**RESPONSE:**
+
+# TRIAL 24 ()
 **PROMPT ():** 
 
 **RESPONSE:**
@@ -130,3 +165,7 @@ i noticed the lower the tokens is, the faster is runs (obvious now that i observ
 6 min 45 secs for 100 tokens 
 9 mins 45 secs for 150 tokens
 (i somewhat rounded to 45s, but you can +/- 3 secs to those numbers)
+
+videos like pulse ox, suction, reposition, and any videos that has multiple hands or actions always come out to be incorrect.
+
+videos that are CLEAR with a single action being performed (no matter how complex) are almost always correct.

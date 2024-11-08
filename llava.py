@@ -40,7 +40,7 @@ conversation = [
 prompt = processor.apply_chat_template(conversation, add_generation_prompt=True)
 
 # Load and process the video
-video_path = "videos\ETT.mp4"
+video_path = "videos\PulseOx.mp4"
 container = av.open(video_path)
 
 total_frames = container.streams.video[0].frames
