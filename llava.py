@@ -40,7 +40,7 @@ conversation = [
 prompt = processor.apply_chat_template(conversation, add_generation_prompt=True)
 
 # Load and process the video
-video_path = "ETT.mp4"
+video_path = "videos\PPV2.mp4"
 container = av.open(video_path)
 
 total_frames = container.streams.video[0].frames
@@ -49,7 +49,7 @@ clip = read_video_pyav(container, indices)
 
 # Process the video and generate output
 inputs_video = processor(text=prompt, videos=clip, padding=True, return_tensors="pt").to(model.device)
-output = model.generate(**inputs_video, max_new_tokens=50, do_sample=False)
+output = model.generate(**inputs_video, max_new_tokens=100, do_sample=False)
 
 # Decode and print the result
 result = processor.decode(output[0][2:], skip_special_tokens=True)
