@@ -44,3 +44,10 @@ What is the likelihood that drying is being performed on the baby? Provide a con
 
 RESPONSE:
 The likelihood that drying is being performed on the baby is medium. The image shows a group of people, likely healthcare professionals, attending to a baby in a hospital setting. The baby is being dried, which is a common...
+
+# NOTE
+i noticed the lower the tokens is, the faster is runs (obvious now that i observe)
+4 mins 45 secs for 50 tokens
+6 min 45 secs for 100 tokens 
+9 mins 45 secs for 150 tokens
+(i somewhat rounded to 45s, but you can +/- 3 secs to those numbers)
