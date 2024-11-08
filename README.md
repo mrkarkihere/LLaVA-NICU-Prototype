@@ -72,7 +72,7 @@ Considering the 8 key actions (PPV, CPR, ETT, Drying, Pulse Oximeter, Reposition
 The action being performed in this video clip is CPR, with a high level of confidence.
 
 # TRIAL 10 (CORRECT)
-**PROMPT:** 
+**PROMPT (CPR):** 
 Observe the actions in this video. Is the clinician performing CPR on the neonate? Describe the method being used and the purpose of this action. Briefly.
 
 **RESPONSE:**
@@ -152,3 +152,16 @@ i noticed the lower the tokens is, the faster is runs (obvious now that i observ
 videos like pulse ox, suction, reposition, and any videos that has multiple hands or actions almost always come out to be incorrect.
 
 videos that are CLEAR with a single action being performed (no matter how complex) are almost always correct.
+
+# Prompt Analysis
+- best performing are CPR actions (100% accuracy)
+- PPV, ETT, Drying are mixed performing (50%-66%)
+- rest all performed terribly (0%)
+- Best performing prompts are those that are clear, focused, provides examples such as "What action step does this segment represent within the neonatal resuscitation procedure? List only if it corresponds to the defined steps, like 'chest compressions' or 'ETT'."
+- Another best performing prompt is one that forces focus on single action such as "Observe the actions in this video. Is the clinician performing [specific action]? Describe the method being used and the purpose of this action."
+
+## Suggested Future Prompts
+- "Among the following actions (PPV, CPR, ETT, Drying, Pulse Oximeter, Reposition, Suction, UVC), what is the PRIMARY action being performed? Focus only on the most prominent procedure visible in the clip."
+- "Is [specific action] being performed in this clip? Provide three visual indicators that support your answer. Confidence: High/Medium/Low"
+- "Compare the movement patterns in this clip to known procedures. Is this PPV or CPR? List specific visual cues that distinguish between these actions."
+- "Identify the single main medical procedure being performed. If it matches one of these key actions [list], name it. If not, respond 'No match'."
