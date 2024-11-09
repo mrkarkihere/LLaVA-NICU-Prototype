@@ -92,3 +92,10 @@ Identify the single main medical procedure being performed. If it matches one of
 The main medical procedure being performed in the image is positive pressure ventilation.
 
 # Prompt Analysis
+**Best Performing Prompts:**
+- "Among the following actions (positive pressure ventilation, chest compressions, Endotracheal intubation, Drying, Pulse Oximeter, Reposition, Suction, Umbilical Venous Catheter), what is the PRIMARY action being performed? Focus only on the most prominent procedure visible in the clip."
+- "Is [specific action] being performed in this clip? Provide three visual indicators that support your answer. Confidence: High/Medium/Low"
+- "Identify the single main medical procedure being performed. If it matches one of these key actions (positive pressure ventilation, chest compressions, Endotracheal intubation, Drying, Pulse Oximeter, Reposition, Suction, Umbilical Venous Catheter), name it"
+
+**Prompts to Drop:**
+- "Compare the movement patterns in this clip to known procedures. Is this X or Y?" (answer always rambles on and is incorrect)
