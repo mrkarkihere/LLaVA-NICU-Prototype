@@ -31,7 +31,7 @@ conversation = [
     {
         "role": "user",
         "content": [
-            {"type": "text", "text": "Considering the 8 key actions (PPV, CPR, ETT, Drying, Pulse Oximeter, Reposition, Suction, and UVC) outlined in the Neonatal Resuscitation Program, which action is being performed in this video clip, and with what level of confidence? Briefly and only one action."},
+            {"type": "text", "text": "Identify the single main medical procedure being performed. If it matches one of these key actions (positive pressure ventilation, chest compressions, Endotracheal intubation, Drying, Pulse Oximeter, Reposition, Suction, Umbilical Venous Catheter), name it. If not, respond 'No match'."},
             {"type": "video"},
         ],
     },
@@ -40,7 +40,7 @@ conversation = [
 prompt = processor.apply_chat_template(conversation, add_generation_prompt=True)
 
 # Load and process the video
-video_path = "videos\Reposition2.mp4"
+video_path = "videos\Drying2.mp4"
 container = av.open(video_path)
 
 total_frames = container.streams.video[0].frames
@@ -49,7 +49,7 @@ clip = read_video_pyav(container, indices)
 
 # Process the video and generate output
 inputs_video = processor(text=prompt, videos=clip, padding=True, return_tensors="pt").to(model.device)
-output = model.generate(**inputs_video, max_new_tokens=100, do_sample=False)
+output = model.generate(**inputs_video, max_new_tokens=50, do_sample=False)
 
 # Decode and print the result
 result = processor.decode(output[0][2:], skip_special_tokens=True)
