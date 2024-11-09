@@ -33,14 +33,14 @@ The image you've provided shows a baby doll being dressed or undressed by a pers
 
 # TRIAL 5 (INCORRECT)
 **PROMPT (Drying2 video):** 
-Identify the single main medical procedure being performed. If it matches one of these key actions (positive pressure ventilation, chest compressions, Endotracheal intubation, Drying, Pulse Oximeter, Reposition, Suction, Umbilical Venous Catheter), name it. If not, respond 'No match'.
+Identify the single main medical procedure being performed. If it matches one of these key actions (positive pressure ventilation, chest compressions, Endotracheal intubation, Drying, Pulse Oximeter, Reposition, Suction, Umbilical Venous Catheter), name it.
 
 **RESPONSE:** 
 The main medical procedure being performed in the image is Endotracheal intubation.
 
 # TRIAL 6 (CORRECT)
 **PROMPT (ETT2 video):** 
-Identify the single main medical procedure being performed. If it matches one of these key actions (positive pressure ventilation, chest compressions, Endotracheal intubation, Drying, Pulse Oximeter, Reposition, Suction, Umbilical Venous Catheter), name it. If not, respond 'No match'.
+Identify the single main medical procedure being performed. If it matches one of these key actions (positive pressure ventilation, chest compressions, Endotracheal intubation, Drying, Pulse Oximeter, Reposition, Suction, Umbilical Venous Catheter), name it.
 
 **RESPONSE:** 
 The main medical procedure being performed in the image is Endotracheal intubation.
@@ -69,6 +69,26 @@ Among the following actions (positive pressure ventilation, chest compressions, 
 **RESPONSE:** 
 The primary action being performed in the clip is Endotracheal intubation.
 
+# TRIAL 10 (CORRECT)
+**PROMPT (PPV2 video):** 
+Among the following actions (positive pressure ventilation, chest compressions, Endotracheal intubation, Drying, Pulse Oximeter, Reposition, Suction, Umbilical Venous Catheter), what is the PRIMARY action being performed? Focus only on the most prominent procedure visible in the clip.
+
+**RESPONSE:** 
+The primary action being performed in the clip is positive pressure ventilation.
+
+# TRIAL 11 (CORRECT)
+**PROMPT (PPV2 video):** 
+Is positive pressure ventilation being performed in this clip? Provide three visual indicators that support your answer. Confidence: High/Medium/Low
+
+**RESPONSE:** 
+Yes, positive pressure ventilation is being performed in this clip. Three visual indicators that support this answer are:
+1. The person is wearing a surgical mask, which is commonly used in medical settings to prevent the spread of...
+
+# TRIAL 12 (CORRECT)
+**PROMPT (PPV2 video):** 
+Identify the single main medical procedure being performed. If it matches one of these key actions (positive pressure ventilation, chest compressions, Endotracheal intubation, Drying, Pulse Oximeter, Reposition, Suction, Umbilical Venous Catheter), name it.
+
+**RESPONSE:** 
+The main medical procedure being performed in the image is positive pressure ventilation.
+
 # Prompt Analysis
-- so by this point, i've concluded that the best one is "What action step does this segment represent within the neonatal resuscitation procedure? List only if it corresponds to the defined steps, like 'chest compressions' or 'ETT'." with a nearly 100% accuracy
-- 
