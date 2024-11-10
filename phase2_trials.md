@@ -147,10 +147,10 @@ Note: Consistently poor performance with rambling responses
 
 **Best Performing Prompts:**
 - "Is [specific action] being performed in this clip? Provide three visual indicators that support your answer. Confidence: High/Medium/Low"
-- "Identify the single main medical procedure being performed. If it matches one of these key actions (positive pressure ventilation, chest compressions, Endotracheal intubation, Drying, Pulse Oximeter, Reposition, Suction, Umbilical Venous Catheter), name it"
+- "Identify the single main medical procedure being performed. If it matches one of these key actions (positive pressure ventilation, chest compressions, Endotracheal intubation, Drying, Pulse Oximetry, Reposition, Suction, Umbilical Venous Catheter), name it"
 - (**NOTE: more testing is needed**) What action step does this segment represent within the neonatal resuscitation procedure? List only if it corresponds to the defined steps, like X or Y.
 - (**NOTE: more testing is needed**) Observe the actions in this video. Is the clinician performing [specific action]? Describe the method being used and the purpose of this action.
 
 **Prompts to Drop:**
 - "Compare the movement patterns in this clip to known procedures. Is this X or Y?" (answer always rambles on and is incorrect)
-- "Among the following actions (positive pressure ventilation, chest compressions, Endotracheal intubation, Drying, Pulse Oximeter, Reposition, Suction, Umbilical Venous Catheter), what is the PRIMARY action being performed? Focus only on the most prominent procedure visible in the clip."
+- "Among the following actions (positive pressure ventilation, chest compressions, Endotracheal intubation, Drying, Pulse Oximetry, Reposition, Suction, Umbilical Venous Catheter), what is the PRIMARY action being performed? Focus only on the most prominent procedure visible in the clip."

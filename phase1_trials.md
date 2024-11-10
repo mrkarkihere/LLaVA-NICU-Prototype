@@ -160,7 +160,7 @@ videos that are CLEAR with a single action being performed (no matter how comple
 - we've also come to a realization that prompts should specify actions such as "ETT" to Endotracheal intubation since "ETT" could refer to a variety of actions.
 
 ## Suggested Future Prompts
-- "Among the following actions (positive pressure ventilation, chest compressions, Endotracheal intubation, Drying, Pulse Oximeter, Reposition, Suction, Umbilical Venous Catheter), what is the PRIMARY action being performed? Focus only on the most prominent procedure visible in the clip."
+- "Among the following actions (positive pressure ventilation, chest compressions, Endotracheal intubation, Drying, Pulse Oximetry, Reposition, Suction, Umbilical Venous Catheter), what is the PRIMARY action being performed? Focus only on the most prominent procedure visible in the clip."
 - "Is [specific action] being performed in this clip? Provide three visual indicators that support your answer. Confidence: High/Medium/Low"
 - **NOTE:** do NOT use this prompt, it always rambles on "Compare the movement patterns in this clip to known procedures. Is this X or Y?"
-- "Identify the single main medical procedure being performed. If it matches one of these key actions (positive pressure ventilation, chest compressions, Endotracheal intubation, Drying, Pulse Oximeter, Reposition, Suction, Umbilical Venous Catheter), name it"
+- "Identify the single main medical procedure being performed. If it matches one of these key actions (positive pressure ventilation, chest compressions, Endotracheal intubation, Drying, Pulse Oximetry, Reposition, Suction, Umbilical Venous Catheter), name it"

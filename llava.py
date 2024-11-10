@@ -31,7 +31,7 @@ conversation = [
     {
         "role": "user",
         "content": [
-            {"type": "text", "text": "What action step does this segment represent within the neonatal resuscitation procedure? List only if it corresponds to the defined steps, like 'chest compressions' or 'ETT'."},
+            {"type": "text", "text": "Is Repositioning being performed in this clip? Provide three visual indicators that support your answer. Confidence: High/Medium/Low"},
             {"type": "video"},
         ],
     },
@@ -40,7 +40,7 @@ conversation = [
 prompt = processor.apply_chat_template(conversation, add_generation_prompt=True)
 
 # Load and process the video
-video_path = "videos\Drying2.mp4"
+video_path = "videos\PPV.mp4"
 container = av.open(video_path)
 
 total_frames = container.streams.video[0].frames
