@@ -31,7 +31,7 @@ conversation = [
     {
         "role": "user",
         "content": [
-            {"type": "text", "text": "Identify the single main medical procedure being performed. If it matches one of these key actions (positive pressure ventilation, chest compressions, Endotracheal intubation, Drying, Pulse Oximeter, Reposition, Suction, Umbilical Venous Catheter), name it."},
+            {"type": "text", "text": "What action step does this segment represent within the neonatal resuscitation procedure? List only if it corresponds to the defined steps, like 'chest compressions' or 'ETT'."},
             {"type": "video"},
         ],
     },
@@ -40,7 +40,7 @@ conversation = [
 prompt = processor.apply_chat_template(conversation, add_generation_prompt=True)
 
 # Load and process the video
-video_path = "videos\PPV2.mp4"
+video_path = "videos\Drying2.mp4"
 container = av.open(video_path)
 
 total_frames = container.streams.video[0].frames
