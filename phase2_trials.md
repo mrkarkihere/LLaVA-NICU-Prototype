@@ -106,15 +106,51 @@ Identify the single main medical procedure being performed. If it matches one of
 The main medical procedure being performed in the image is chest compressions.
 
 # Prompt Analysis
-- so what i've noticed is that in certain prompts that have 2 options like action X & Y, the mode will get it right if the answer is either X or Y. but it'll hallucinate or say something else if the action is neither X nor Y.
-- leading on from the previous point, the model performs well if the action is in the question. it doesn't matter if its a (X or Y) or (X or Y or Z or ...), so long as the answer is in the question it'll get it right
+
+**Prompt 1:** "Is [specific action] being performed in this clip? Provide three visual indicators that support your answer. Confidence: High/Medium/Low"
+- Trials: 4
+- Correct: 4
+- Accuracy: 100%
+Note: Consistently performed well across different procedures
+
+**Prompt 2:** "Identify the single main medical procedure being performed. If it matches one of these key actions (positive pressure ventilation, chest compressions, Endotracheal intubation, Drying, Pulse Oximeter, Reposition, Suction, Umbilical Venous Catheter), name it"
+- Trials: 4
+- Correct: 3
+- Incorrect: 1
+- Accuracy: 75%
+Note: Generally reliable with concise responses
+
+**Prompt 3:** "Among the following actions (positive pressure ventilation, chest compressions, Endotracheal intubation, Drying, Pulse Oximeter, Reposition, Suction, Umbilical Venous Catheter), what is the PRIMARY action being performed? Focus only on the most prominent procedure visible in the clip."
+- Trials: 4
+- Correct: 2
+- Incorrect: 2
+- Accuracy: 50%
+Note: Mixed performance, but clear and structured format
+
+**Prompt 4:** "Compare the movement patterns in this clip to known procedures. Is this X or Y?" (answer always rambles on and is incorrect)
+- Trials: 2
+- Correct: 0
+- Incorrect: 2
+- Accuracy: 0%
+Note: Consistently poor performance with rambling responses
+
+**The model performs better when:**
+- The prompt is specific and structured
+- Visual indicators are explicitly requested
+- The correct action is mentioned in the prompt
+- A clear list of possible actions is provided
+
+**The model struggles when:**
+- Asked to compare between only two options
+- The correct action isn't mentioned in the prompt
+- Open-ended movement pattern analysis is requested
 
 **Best Performing Prompts:**
-- "Among the following actions (positive pressure ventilation, chest compressions, Endotracheal intubation, Drying, Pulse Oximeter, Reposition, Suction, Umbilical Venous Catheter), what is the PRIMARY action being performed? Focus only on the most prominent procedure visible in the clip."
 - "Is [specific action] being performed in this clip? Provide three visual indicators that support your answer. Confidence: High/Medium/Low"
 - "Identify the single main medical procedure being performed. If it matches one of these key actions (positive pressure ventilation, chest compressions, Endotracheal intubation, Drying, Pulse Oximeter, Reposition, Suction, Umbilical Venous Catheter), name it"
-- What action step does this segment represent within the neonatal resuscitation procedure? List only if it corresponds to the defined steps, like X or Y.
-- Observe the actions in this video. Is the clinician performing [specific action]? Describe the method being used and the purpose of this action.
+- (**NOTE: more testing is needed**) What action step does this segment represent within the neonatal resuscitation procedure? List only if it corresponds to the defined steps, like X or Y.
+- (**NOTE: more testing is needed**) Observe the actions in this video. Is the clinician performing [specific action]? Describe the method being used and the purpose of this action.
 
 **Prompts to Drop:**
 - "Compare the movement patterns in this clip to known procedures. Is this X or Y?" (answer always rambles on and is incorrect)
+- "Among the following actions (positive pressure ventilation, chest compressions, Endotracheal intubation, Drying, Pulse Oximeter, Reposition, Suction, Umbilical Venous Catheter), what is the PRIMARY action being performed? Focus only on the most prominent procedure visible in the clip."
