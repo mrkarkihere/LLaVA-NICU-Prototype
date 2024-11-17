@@ -6,11 +6,11 @@ from safetensors.torch import load_file
 import json
 
 # GLOBALS
+VIDEO_PATH = "videos/PulseOximeter2.mp4"
 PROMPT = "Among the following actions (positive pressure ventilation, chest compressions, Endotracheal intubation, Drying, Pulse Oximetry, Reposition, Suction, Umbilical Venous Catheter), what is the PRIMARY action being performed? Focus only on the most prominent procedure visible in the clip."
 MAX_TOKEN = 50
-VIDEO_PATH = "videos/Reposition.mp4"
-RUN_FINE_TUNED_MODEL = True
-RUN_ORIGINAL_MODEL = False
+RUN_ORIGINAL_MODEL = True
+RUN_FINE_TUNED_MODEL = False
 BASE_MODEL_NAME = "llava-hf/LLaVA-NeXT-Video-7B-hf"
 CHECKPOINT_PATH = "./checkpoints/llava-next-video-7b_lora-True_qlora-False"
 

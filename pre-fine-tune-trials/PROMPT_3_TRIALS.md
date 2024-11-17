@@ -68,22 +68,23 @@ Among the following actions (positive pressure ventilation, chest compressions, 
 **RESPONSE:**
 The primary action being performed in the clip is positive pressure ventilation.
 
-# TRIAL 11 ()
+# TRIAL 11 (INCORRECT)
 **PROMPT (Drying video):** 
 Among the following actions (positive pressure ventilation, chest compressions, Endotracheal intubation, Drying, Pulse Oximetry, Reposition, Suction, Umbilical Venous Catheter), what is the PRIMARY action being performed? Focus only on the most prominent procedure visible in the clip.
 
 **RESPONSE:**
+The image you have provided appears to show a CPR mannequin with healthcare staff surrounding and practicing various tasks involved in managing a simulated patient that may be in an emergency or a training environment...
 
-
-# TRIAL 12 ()
+# TRIAL 12 (INCORRECT)
 **PROMPT (ETT video):** 
 Among the following actions (positive pressure ventilation, chest compressions, Endotracheal intubation, Drying, Pulse Oximetry, Reposition, Suction, Umbilical Venous Catheter), what is the PRIMARY action being performed? Focus only on the most prominent procedure visible in the clip.
 
 **RESPONSE:**
+The primary action being performed in the clip is suction, as several people are shown using a suction device with the device inserted into the patient's mouth and airway...
 
-
-# TRIAL 13 ()
+# TRIAL 13 (INCORRECT)
 **PROMPT (PulseOximeter2 video):** 
 Among the following actions (positive pressure ventilation, chest compressions, Endotracheal intubation, Drying, Pulse Oximetry, Reposition, Suction, Umbilical Venous Catheter), what is the PRIMARY action being performed? Focus only on the most prominent procedure visible in the clip.
 
 **RESPONSE:**
+The most prominent procedure being conducted in this clip is positive pressure ventilation, which is a technique used for resuscitating a patient by introducing fresh air at high pressure into their airways...
