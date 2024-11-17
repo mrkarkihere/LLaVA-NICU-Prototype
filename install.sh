@@ -5,23 +5,17 @@ set -e
 
 echo "Setting up Linux environment for LLaVA..."
 
-# Check if running as root
-if [ "$EUID" -ne 0 ]; then 
-    echo "Please run with sudo"
-    exit 1
-fi
-
 # Update package list
 echo "Updating package list..."
-apt-get update
+sudo apt-get update
 
 # Install Python and pip if not present
 echo "Installing Python and pip..."
-apt-get install -y python3 python3-pip python3-venv
+sudo apt-get install -y python3 python3-pip python3-venv
 
 # Install system dependencies for PyAV
 echo "Installing system dependencies for PyAV..."
-apt-get install -y \
+sudo apt-get install -y \
     python3-dev \
     pkg-config \
     libavformat-dev \
@@ -33,34 +27,30 @@ apt-get install -y \
     libavfilter-dev \
     ffmpeg
 
-# Create virtual environment directory with appropriate permissions
+# Create virtual environment in user's home directory
 echo "Creating Python virtual environment..."
-mkdir -p /opt/llava_env
-python3 -m venv /opt/llava_env
-chown -R $SUDO_USER:$SUDO_USER /opt/llava_env
+VENV_PATH="$HOME/llava_env"
+python3 -m venv $VENV_PATH
 
-# Switch to the user who ran sudo
-if [ -n "$SUDO_USER" ]; then
-    # Activate virtual environment and install packages as the original user
-    su - $SUDO_USER << 'EOF'
-    source /opt/llava_env/bin/activate
-    
-    # Upgrade pip
-    pip install --upgrade pip
-    
-    # Install PyTorch (CPU version - uncomment CUDA version if needed)
-    pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cpu
-    # For CUDA support, use:
-    # pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
-    
-    # Install other dependencies
-    pip install av
-    pip install numpy
-    pip install transformers
-    pip install safetensors
-    
-    # Verify installations
-    python3 -c "
+# Activate virtual environment and install packages
+source $VENV_PATH/bin/activate
+
+# Upgrade pip
+pip install --upgrade pip
+
+# Install PyTorch (CPU version - uncomment CUDA version if needed)
+pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cpu
+# For CUDA support, use:
+# pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
+
+# Install other dependencies
+pip install av
+pip install numpy
+pip install transformers
+pip install safetensors
+
+# Verify installations
+python3 -c "
 import av
 import numpy as np
 import torch
@@ -70,19 +60,26 @@ import json
 
 print('All dependencies successfully installed!')
 "
+
+# Create activation script in user's bin directory
+mkdir -p "$HOME/bin"
+cat > "$HOME/bin/activate_llava" << EOF
+#!/bin/bash
+source $VENV_PATH/bin/activate
 EOF
+
+chmod +x "$HOME/bin/activate_llava"
+
+# Add to PATH if not already there
+if [[ ":$PATH:" != *":$HOME/bin:"* ]]; then
+    echo 'export PATH="$HOME/bin:$PATH"' >> "$HOME/.bashrc"
+    echo "Added $HOME/bin to PATH"
 fi
 
 echo "Setup complete!"
 echo "To activate the environment, run:"
-echo "source /opt/llava_env/bin/activate"
-
-# Create an activation script in /usr/local/bin
-cat > /usr/local/bin/activate_llava << 'EOF'
-#!/bin/bash
-source /opt/llava_env/bin/activate
-EOF
-
-chmod +x /usr/local/bin/activate_llava
-
-echo "You can also activate the environment by running: activate_llava"
+echo "source $VENV_PATH/bin/activate"
+echo "or simply:"
+echo "activate_llava"
+echo ""
+echo "Note: You may need to restart your terminal or run 'source ~/.bashrc' to use the activate_llava command"
