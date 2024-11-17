@@ -85,21 +85,21 @@ Is Repositioning being performed in this clip? Provide three visual indicators t
 **RESPONSE:**
 Yes, repositioning is being performed in this clip. Three visual indicators that support this answer are...
 
-# TRIAL 11 ()
+# TRIAL 11 (INCORRECT)
 **PROMPT (Drying video):** 
 Is Endotracheal intubation being performed in this clip? Provide three visual indicators that support your answer. Confidence: High/Medium/Low
 
 **RESPONSE:**
 Based on the visual indicators provided, it appears that Endotracheal intubation is being performed in this clip. Here are three visual indicators that support this
 
-# TRIAL 12 ()
+# TRIAL 12 (INCORRECT)
 **PROMPT (ETT video):** 
 Is positive pressure ventilation being performed in this clip? Provide three visual indicators that support your answer. Confidence: High/Medium/Low
 
 **RESPONSE:**
 Yes, positive pressure ventilation is being performed in this clip. Three visual indicators that support this answer are...
 
-# TRIAL 13 ()
+# TRIAL 13 (INCORRECT)
 **PROMPT (PulseOximeter2 video):** 
 Is Repositioning being performed in this clip? Provide three visual indicators that support your answer. Confidence: High/Medium/Low
 
