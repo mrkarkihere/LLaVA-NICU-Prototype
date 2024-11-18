@@ -4,3 +4,4 @@
 cuda_bug_fix.txt
 /checkpoints/
 /venv
+/node_modules
