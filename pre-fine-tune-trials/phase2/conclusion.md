@@ -1,7 +1,7 @@
 # Medical Procedure Prompt Analysis
 
 ## Overview
-Analysis of prompt performance for medical procedure identification in video clips, including performance metrics, recommendations, and suggested improvements.
+Analysis of prompt performance for medical procedure identification in video clips, including performance metrics and recommended prompts based on empirical results.
 
 ## Accuracy Analysis
 
@@ -54,73 +54,14 @@ Analysis of prompt performance for medical procedure identification in video cli
 
 ## Recommended Improved Prompts
 
-### Prompt 1: Two-Stage Verification
-```
-Stage 1: Is [specific procedure] being performed in this clip? (Yes/No)
-Stage 2: If Yes, provide exactly three distinct visual indicators that confirm this procedure. If No, explain what procedure is actually being performed with three visual indicators.
-Confidence Level Required (High/Medium/Low)
-```
+### Five Best Suggested Prompts
 
-### Prompt 2: Hierarchical Decision Tree
-```
-Follow these steps in order:
-1. Is there direct patient contact/manipulation? (Yes/No)
-2. Is any medical equipment being used? List specific items visible
-3. Which of these procedures matches ALL observed actions:
-   [list of procedures]
-4. Provide 3 specific visual elements that confirm your choice
-Confidence Level Required (High/Medium/Low)
-```
+1. "Is [specific procedure] being performed in this clip? Provide exactly three visual indicators supporting your answer. State confidence level (High/Medium/Low)."
 
-### Prompt 3: Feature-Based Classification
-```
-Observe and report:
-1. Location of healthcare provider's hands
-2. Medical equipment present (if any)
-3. Patient position and movement
-4. Based ONLY on these observations, which ONE procedure from the following list matches ALL observed features:
-   [list of procedures]
-Confidence Level Required (High/Medium/Low)
-```
+2. "List three pieces of medical equipment visible in use. Based only on equipment usage, which procedure is being performed? Provide three visual confirmations."
 
-## Recommendations for Improvement
+3. "What is the primary location of healthcare provider's hands? Based on hand placement and movement, which ONE procedure from [list] is being performed? Provide three visual indicators."
 
-### Structural Changes
-1. **Mandatory Visual Evidence**
-   - Require specific visual indicators
-   - Force justification of classification
-   - Include anatomical references
+4. "Observe for 3 seconds. From [procedure list], eliminate procedures that cannot be occurring based on visible evidence. Name the procedure being performed with three specific visual indicators."
 
-2. **Confidence Assessment**
-   - Include confidence ratings for all responses
-   - Identify uncertain predictions
-   - Track correlation between confidence and accuracy
-
-3. **Structured Observation**
-   - Implement step-by-step analysis
-   - Use decision tree approach
-   - Focus on distinctive features
-
-4. **Verification Steps**
-   - Include double-checking mechanisms
-   - Require ruling out similar procedures
-   - Validate initial assessments
-
-### Implementation Guidelines
-1. Always require minimum of three visual indicators
-2. Include confidence rating for each assessment
-3. Use structured, step-by-step format
-4. Require specific anatomical references
-5. Include negative confirmation steps
-6. Focus on distinguishing features between similar procedures
-
-## Future Improvements
-
-### Suggested Enhancements
-1. Development of procedure-specific indicator lists
-2. Creation of standardized visual feature checklist
-3. Implementation of weighted scoring system
-4. Integration of anatomical reference points
-5. Development of procedure differentiation guidelines
-
-### Monitoring and Ev
+5. "What medical procedure matches ALL of these criteria: Current hand position, Equipment in use, Patient positioning? Provide three visual confirmations and confidence level."
