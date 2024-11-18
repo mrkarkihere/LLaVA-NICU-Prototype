@@ -39,8 +39,9 @@ learning_rates = [d['learning_rate'] for d in data]
 # Create figure and axis objects with a single subplot
 fig, ax1 = plt.subplots(figsize=(12, 6))
 
-# Set the style
-plt.style.use('seaborn')
+# Set the styler
+plt.style.use('seaborn-v0_8-whitegrid')
+
 
 # Plot loss and gradient norm on the first y-axis
 color1 = '#8884d8'
