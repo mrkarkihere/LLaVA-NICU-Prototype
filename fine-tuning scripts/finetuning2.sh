@@ -1,43 +1,43 @@
-NUM_GPUS=1
-DISTRIBUTED_ARGS="
-    --nnodes=1 \
-    --nproc_per_node ${NUM_GPUS} \
-    --rdzv_backend c10d \
-    --rdzv_endpoint localhost:0
-"
+    NUM_GPUS=1
+    DISTRIBUTED_ARGS="
+        --nnodes=1 \
+        --nproc_per_node ${NUM_GPUS} \
+        --rdzv_backend c10d \
+        --rdzv_endpoint localhost:0
+    "
 
-MODEL_ID=llava-next-video-7b
-TRAIN_DATA_PATH=/content/video_metadata.json
-EVAL_DATA_PATH=/content/video_metadata.json
-IMAGE_FOLDER=./example_data/images
-VIDEO_FOLDER=/content/drive/MyDrive/Capstone/Videos/Videos
-NUM_FRAMES=8
+    MODEL_ID=llava-next-video-7b
+    TRAIN_DATA_PATH=/content/video_metadata.json
+    EVAL_DATA_PATH=/content/video_metadata.json
+    IMAGE_FOLDER=./example_data/images
+    VIDEO_FOLDER=/content/drive/MyDrive/Capstone/Videos/Videos
+    NUM_FRAMES=8
 
-# Disable vision encoder training for memory efficiency
-TRAIN_VISION_ENCODER=False
-USE_VISION_LORA=False
-TRAIN_VISION_PROJECTOR=False
+    # Disable vision encoder training for memory efficiency
+    TRAIN_VISION_ENCODER=False
+    USE_VISION_LORA=False
+    TRAIN_VISION_PROJECTOR=False
 
-# CHANGES HAPPENED HERE::
-USE_LORA=True
-Q_LORA=True
-LORA_R=2                 
-LORA_ALPHA=8 
+    # CHANGES HAPPENED HERE::
+    USE_LORA=True
+    Q_LORA=True
+    LORA_R=2                 
+    LORA_ALPHA=8 
 
-RUN_ID=${MODEL_ID}_lora-${USE_LORA}_qlora-${Q_LORA}
+    RUN_ID=${MODEL_ID}_lora-${USE_LORA}_qlora-${Q_LORA}
 
-DS_STAGE=zero3
+    DS_STAGE=zero3
 
-PER_DEVICE_BATCH_SIZE=8 
-GRAD_ACCUM=1  
-NUM_EPOCHS=6 
+    PER_DEVICE_BATCH_SIZE=8 
+    GRAD_ACCUM=1  
+    NUM_EPOCHS=6 
 
-LR=5e-5   
-MODEL_MAX_LEN=512
-# :: TO HERE
+    LR=5e-5   
+    MODEL_MAX_LEN=512
+    # :: TO HERE
 
 
-# Optimize training with mixed precision
+    # Optimize training with mixed precision
 torchrun $DISTRIBUTED_ARGS train.py \
     --model_id $MODEL_ID \
     --data_path $TRAIN_DATA_PATH \
@@ -65,7 +65,7 @@ torchrun $DISTRIBUTED_ARGS train.py \
     --tf32 True \
     --model_max_length $MODEL_MAX_LEN \
     --gradient_checkpointing True \
-    --dataloader_num_workers 2 \  # Reduce workers for better performance in Colab
+    --dataloader_num_workers 2 \
     --train_vision_encoder $TRAIN_VISION_ENCODER \
     --use_vision_lora $USE_VISION_LORA \
     --train_vision_projector $TRAIN_VISION_PROJECTOR \
