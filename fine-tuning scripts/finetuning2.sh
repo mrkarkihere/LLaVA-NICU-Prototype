@@ -26,7 +26,7 @@
 
     RUN_ID=${MODEL_ID}_lora-${USE_LORA}_qlora-${Q_LORA}
 
-    DS_STAGE=zero3
+    DS_STAGE=zero2 
 
     PER_DEVICE_BATCH_SIZE=8 
     GRAD_ACCUM=1  
