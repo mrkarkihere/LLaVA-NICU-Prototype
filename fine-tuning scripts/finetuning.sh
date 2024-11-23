@@ -10,7 +10,7 @@ MODEL_ID=llava-next-video-7b
 TRAIN_DATA_PATH=/content/video_metadata.json
 EVAL_DATA_PATH=/content/video_metadata.json
 IMAGE_FOLDER=./example_data/images
-VIDEO_FOLDER=/content/drive/MyDrive/Capstone/Videos
+VIDEO_FOLDER=/content/drive/MyDrive/Capstone/Videos/Videos
 NUM_FRAMES=8
 
 # Disable vision encoder training for memory efficiency
