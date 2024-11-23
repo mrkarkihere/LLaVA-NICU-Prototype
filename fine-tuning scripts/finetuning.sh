@@ -10,7 +10,7 @@ MODEL_ID=llava-next-video-7b
 TRAIN_DATA_PATH=/content/video_metadata.json
 EVAL_DATA_PATH=/content/video_metadata.json
 IMAGE_FOLDER=./example_data/images
-VIDEO_FOLDER=/content/drive/MyDrive/Capstone/Videos/Videos
+VIDEO_FOLDER=/content/drive/MyDrive/Capstone/Videos
 NUM_FRAMES=8
 
 # Disable vision encoder training for memory efficiency
@@ -63,7 +63,7 @@ torchrun $DISTRIBUTED_ARGS train.py \
     --tf32 True \
     --model_max_length $MODEL_MAX_LEN \
     --gradient_checkpointing True \
-    --dataloader_num_workers 2 \  # Reduce workers for better performance in Colab
+    --dataloader_num_workers 2 \
     --train_vision_encoder $TRAIN_VISION_ENCODER \
     --use_vision_lora $USE_VISION_LORA \
     --train_vision_projector $TRAIN_VISION_PROJECTOR \
