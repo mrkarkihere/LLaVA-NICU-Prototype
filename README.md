@@ -105,12 +105,12 @@ Please provide a detailed description of the video.
 **RESPONSE:** 
 This video shows a medical professional performing Positive Pressure Ventilation (PPV) on a newborn baby. They are using a bag-valve-mask device to provide assisted breathing support.
 
-# TRIAL 16 (INCORRECT)
+# TRIAL 16 (CORRECT)
 **PROMPT (Drying video):** 
 Please provide a detailed description of the video.
 
 **RESPONSE:** 
-This video shows an action related to neonatal resuscitation.
+This video shows medical staff thoroughly drying a newborn baby immediately after birth. This is an essential step to prevent heat loss and stimulate breathing.
 
 # TRIAL 17 (INCORRECT)
 **PROMPT (Drying2 video):** 
@@ -119,25 +119,26 @@ Please provide a detailed description of the video.
 **RESPONSE:** 
 This video shows medical staff performing suction to clear amniotic fluid and secretions from a newborn baby's mouth and nose, ensuring clear airways.
 
-# TRIAL 18 (INCORRECT)
+# TRIAL 18 (CORRECT)
 **PROMPT (Drying3 video):** 
 Please provide a detailed description of the video.
 
 **RESPONSE:** 
-This video shows an action related to neonatal resuscitation.
+This video shows medical staff thoroughly drying a newborn baby immediately after birth. This is an essential step to prevent heat loss and stimulate breathing.
 
-# TRIAL 19 (INCORRECT)
+# TRIAL 19 (CORRECT)
 **PROMPT (Drying4 video):** 
 Please provide a detailed description of the video.
 
 **RESPONSE:** 
+This video shows medical staff thoroughly drying a newborn baby immediately after birth. This is an essential step to prevent heat loss and stimulate breathing.
 
 # TRIAL 20 (INCORRECT)
 **PROMPT (Drying5 video):** 
 Please provide a detailed description of the video.
 
 **RESPONSE:** 
-This video shows an action related to neonatal resuscitation.
+This video shows medical staff thoroughly drying a newborn baby immediately after birth. This is an essential step to prevent heat loss and stimulate breathing.
 
 # TRIAL 21 (INCORRECT)
 **PROMPT (PulseOximetry video):** 
