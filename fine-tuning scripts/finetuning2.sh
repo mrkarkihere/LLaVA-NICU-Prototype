@@ -33,7 +33,7 @@
     NUM_EPOCHS=6 
 
     LR=5e-5   
-    MODEL_MAX_LEN=512
+    MODEL_MAX_LEN=1500
     # :: TO HERE
 
 
