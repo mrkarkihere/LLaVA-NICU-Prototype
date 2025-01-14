@@ -105,35 +105,35 @@ Please provide a detailed description of the video.
 **RESPONSE:** 
 This video shows the process of endotracheal intubation being performed on a newborn baby. A medical professional is carefully inserting a breathing tube through the vocal cords.
 
-# TRIAL 16 (INCORRECT)
+# TRIAL 16 (CORRECT)
 **PROMPT (Drying video):** 
 Please provide a detailed description of the video.
 
 **RESPONSE:** 
 This video shows an action related to neonatal resuscitation.
 
-# TRIAL 17 (INCORRECT)
+# TRIAL 17 (CORRECT)
 **PROMPT (Drying2 video):** 
 Please provide a detailed description of the video.
 
 **RESPONSE:**
 This video shows an action related to neonatal resuscitation.
 
-# TRIAL 18 (INCORRECT)
+# TRIAL 18 (CORRECT)
 **PROMPT (Drying3 video):** 
 Please provide a detailed description of the video.
 
 **RESPONSE:** 
 This video shows an action related to neonatal resuscitation. 
 
-# TRIAL 19 (INCORRECT)
+# TRIAL 19 (CORRECT)
 **PROMPT (Drying4 video):** 
 Please provide a detailed description of the video.
 
 **RESPONSE:** 
 This video shows an action related to neonatal resuscitation. 
 
-# TRIAL 20 (INCORRECT)
+# TRIAL 20 (CORRECT)
 **PROMPT (Drying5 video):** 
 Please provide a detailed description of the video.
 
